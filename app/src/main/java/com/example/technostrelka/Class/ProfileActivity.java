@@ -12,7 +12,7 @@ import com.example.technostrelka.R;
 public class ProfileActivity extends AppCompatActivity {
 
     private TextView fullNameTextView, loginTextView, emailTextView, mobilePhoneTextView;
-    private Button logoutButton;
+    private Button logoutButton, goToMenyComicSelection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
         emailTextView = findViewById(R.id.emailTextView);
         mobilePhoneTextView = findViewById(R.id.mobilePhoneTextView);
         logoutButton = findViewById(R.id.logoutButton);
+        goToMenyComicSelection = findViewById(R.id.goToMenyComicSelection);
 
         Intent intent = getIntent();
         String fullName = intent.getStringExtra("FULL_NAME");
@@ -42,6 +43,15 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginIntent = new Intent(ProfileActivity.this, LoginActivity.class);
                 startActivity(loginIntent);
+                finish();
+            }
+        });
+
+        goToMenyComicSelection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent comicSelection = new Intent(ProfileActivity.this, ComicsMenuActivity.class);
+                startActivity(comicSelection);
                 finish();
             }
         });

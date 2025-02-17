@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Comic Title -->
+    <EditText
+        android:id="@+id/comicTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Comic Title"
+        android:inputType="text" />
+
+    <!-- Comic Description -->
+    <EditText
+        android:id="@+id/comicDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Comic Description"
+        android:inputType="textMultiLine" />
+
+    <!-- Create Comic Button -->
+    <Button
+        android:id="@+id/createComicButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Comic"
+        android:backgroundTint="@color/black"
+        android:textColor="@android:color/white"
+        android:padding="12dp" />
+
+</LinearLayout>
